@@ -1,0 +1,6 @@
+# Lowcal
+
+## Structure
+
+- `frontend/`
+- `backend/`
