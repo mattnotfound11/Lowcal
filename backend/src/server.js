@@ -2,12 +2,15 @@ import express from 'express';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { randomBytes } from 'node:crypto';
+import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '..', 'data');
-const STORE_DIR = path.join(DATA_DIR, 'store');
+// Serverless filesystems are read-only except for the temp dir (not durable).
+const ON_VERCEL = Boolean(process.env.VERCEL);
+const STORE_DIR = ON_VERCEL ? path.join(os.tmpdir(), 'lowcal-store') : path.join(DATA_DIR, 'store');
 const FRONTEND_DIST = path.join(__dirname, '..', '..', 'frontend', 'dist');
 const PORT = process.env.PORT || 4000;
 
@@ -159,9 +162,13 @@ app.post('/api/contact', async (req, res) => {
 app.use('/api', (_req, res) => res.status(404).json({ error: 'Not found' }));
 
 // In production, serve the built frontend from the same origin.
-if (existsSync(FRONTEND_DIST)) {
+if (!ON_VERCEL && existsSync(FRONTEND_DIST)) {
   app.use(express.static(FRONTEND_DIST));
   app.get(/^(?!\/api).*/, (_req, res) => res.sendFile(path.join(FRONTEND_DIST, 'index.html')));
 }
 
-app.listen(PORT, () => console.log(`Lowcal API on http://localhost:${PORT}`));
+if (!ON_VERCEL) {
+  app.listen(PORT, () => console.log(`Lowcal API on http://localhost:${PORT}`));
+}
+
+export default app;

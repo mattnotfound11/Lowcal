@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            frontend/package-lock.json
+            backend/package-lock.json
+
+      - name: Install
+        run: npm ci && npm --prefix backend ci && npm --prefix frontend ci
+
+      - name: Build storefront
+        run: npm run build
+
+      - name: API smoke test
+        run: npm test
+
+  # Vercel deploys each push to main itself; this job just confirms the same
+  # install + build commands that Vercel runs (vercel.json) succeed from a clean checkout.
+  vercel-parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run Vercel install + build commands
+        run: |
+          npm install && npm --prefix backend install && npm --prefix frontend install
+          npm --prefix frontend run build
+          test -f frontend/dist/index.html
