@@ -11,3 +11,9 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Runtime data written by the API (orders, comments, messages)
+backend/data/store/
+
+# gstack browse reports
+.gstack/

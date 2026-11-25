@@ -1,0 +1,123 @@
+[
+  {
+    "slug": "shiro-grs",
+    "name": "Shiro.GRS",
+    "series": "Throttle",
+    "jp": "シロ",
+    "tagline": "The launch piece. A tribute to the GRS Hilux.",
+    "description": "Lowcal launches with the GRS Throttle Shirt, fusing precision torque with Japanese thread. This limited-run tribute honors the GRS Hilux's DNA, setting a new standard for the street-ready aesthetic.",
+    "car": "Toyota Hilux GR Sport",
+    "colorway": "Washed Charcoal",
+    "price": 799,
+    "preorderPrice": 499,
+    "badge": "Drop 01 · Limited",
+    "featured": true,
+    "sizes": ["S", "M", "L", "XL", "2XL"],
+    "images": {
+      "front": "/images/lookbook/night-duo.jpg",
+      "back": "/images/lookbook/shiro-grs-back.jpg",
+      "gallery": [
+        "/images/lookbook/shiro-grs-back.jpg",
+        "/images/lookbook/night-street.jpg",
+        "/images/lookbook/night-duo.jpg"
+      ]
+    },
+    "photo": true,
+    "details": [
+      "Heavyweight cotton, oversized boxy fit",
+      "Back print: GRS Hilux with スロットル Throttle wordmark",
+      "LowCal Lifestyle barcode tag",
+      "Limited run. No restock once sold out"
+    ]
+  },
+  {
+    "slug": "throttle-pajero",
+    "name": "Throttle Pajero",
+    "series": "Throttle",
+    "jp": "パジェロ",
+    "tagline": "Let our cars scream for us.",
+    "description": "Made for fans of capable, classic Japanese SUVs and the rugged, adventurous side of car enthusiasm. A Pajero rear shot under the Throttle wordmark, with the Lowcal mascot on the chest.",
+    "car": "Mitsubishi Pajero",
+    "colorway": "Jet Black",
+    "price": 799,
+    "preorderPrice": 499,
+    "badge": "Pre-order",
+    "featured": true,
+    "sizes": ["S", "M", "L", "XL", "2XL"],
+    "images": {
+      "front": "/images/products/throttle-pajero-front.png",
+      "back": "/images/products/throttle-pajero-back.png",
+      "gallery": [
+        "/images/products/throttle-pajero-back.png",
+        "/images/products/throttle-pajero-front.png"
+      ]
+    },
+    "photo": false,
+    "details": [
+      "Heavyweight cotton, oversized boxy fit",
+      "Front: Lowcal mascot chest print",
+      "Back: Pajero rear with \"Let our cars scream for us\"",
+      "Red LowCal Lifestyle barcode"
+    ]
+  },
+  {
+    "slug": "throttle-eg",
+    "name": "Throttle EG",
+    "series": "Throttle",
+    "jp": "シビック",
+    "tagline": "Hatchback heritage, slammed and clean.",
+    "description": "A white EG hatch, sitting low under the Throttle wordmark. The red Lowcal crest rides on the chest. For the ones who learned to drive stick in something light, loud and honest.",
+    "car": "Honda Civic EG Hatch",
+    "colorway": "Jet Black",
+    "price": 799,
+    "preorderPrice": 499,
+    "badge": "Pre-order",
+    "featured": true,
+    "sizes": ["S", "M", "L", "XL", "2XL"],
+    "images": {
+      "front": "/images/products/throttle-eg-front.png",
+      "back": "/images/products/throttle-eg-back.png",
+      "gallery": [
+        "/images/products/throttle-eg-back.png",
+        "/images/products/throttle-eg-front.png"
+      ]
+    },
+    "photo": false,
+    "details": [
+      "Heavyweight cotton, oversized boxy fit",
+      "Front: red Lowcal crest",
+      "Back: EG hatch with スロットル Throttle wordmark",
+      "Red LowCal Lifestyle barcode"
+    ]
+  },
+  {
+    "slug": "hella-slow",
+    "name": "Hella Slow",
+    "series": "Hella Slow",
+    "jp": "ゆっくり",
+    "tagline": "Low and slow, on purpose.",
+    "description": "A night-street scene for the crawl-speed crowd. Big HELLA SLOW type on the back, the clean Lowcal wordmark on the chest. Proof that you don't need to be fast to be seen.",
+    "car": "Street scene",
+    "colorway": "Jet Black",
+    "price": 799,
+    "preorderPrice": 499,
+    "badge": "Pre-order",
+    "featured": false,
+    "sizes": ["S", "M", "L", "XL", "2XL"],
+    "images": {
+      "front": "/images/products/hella-slow-front.png",
+      "back": "/images/products/hella-slow-back.png",
+      "gallery": [
+        "/images/products/hella-slow-back.png",
+        "/images/products/hella-slow-front.png"
+      ]
+    },
+    "photo": false,
+    "details": [
+      "Heavyweight cotton, oversized boxy fit",
+      "Front: Lowcal wordmark",
+      "Back: HELLA SLOW night-street graphic",
+      "Blue and red barcode accent"
+    ]
+  }
+]
