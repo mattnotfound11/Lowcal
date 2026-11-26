@@ -56,7 +56,7 @@ export default function Home({ ready }) {
       // Mission: words light up as they pass the reading line
       gsap.fromTo(
         '.manifesto-word',
-        { opacity: 0.1 },
+        { opacity: 0.25 },
         {
           opacity: 1,
           stagger: 0.08,
@@ -66,7 +66,7 @@ export default function Home({ ready }) {
       );
     }, root);
     return () => ctx.revert();
-  }, [products]);
+  }, [!!products]);
 
   return (
     <div ref={root} className="home">
