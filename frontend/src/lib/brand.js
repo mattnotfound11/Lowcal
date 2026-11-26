@@ -10,7 +10,7 @@ export const BRAND = {
     { name: 'TikTok', icon: 'tiktok', handle: '@lowcal.ph7', href: 'https://www.tiktok.com/@lowcal.ph7' },
     { name: 'Facebook', icon: 'facebook', handle: 'Lowcal', href: 'https://www.facebook.com/profile.php?id=61583500577910' },
   ],
-  quote: { text: "If everything seems under control, you're not going fast enough.", by: 'Mario Andretti' },
+  quote: { text: 'I am not designed to come second or third. I am designed to win.', by: 'Ayrton Senna' },
 };
 
 export const NAV = [
